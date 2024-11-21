@@ -33,9 +33,9 @@ const links = [
 ]
 const Navbar = () => {
   return (
-    <div>
+    <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-            lamamia
+            Victor.
         </Link>
         <div>
             {/* <DarkModeToggle /> */}
