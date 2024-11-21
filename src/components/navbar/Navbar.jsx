@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from "./navbar.module.css"
+import Image from 'next/image'
 
 const links = [
     {
@@ -34,7 +35,12 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-            Victor.
+            <Image
+                src="/logo.png"
+                alt="logo"
+                width={50}
+                height={50}
+            />
         </Link>
         <div className={styles.links}> 
             {/* <DarkModeToggle /> */}

@@ -3,15 +3,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .logo {
+.logo {
     font-weight: bold;
     font-size: 22px;
-  }
+}
   
-  .links {
+.links {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
+}
+
+.container{
+    max-width: 1750px;
+}
