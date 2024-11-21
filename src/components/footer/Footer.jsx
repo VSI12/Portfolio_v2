@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./footer.module.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDev } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div>©2023 Lamamia. All rights reserved.</div>
       <div className={styles.social}>
-        <Image src="/1.png" width={15} height={15} className={styles.icon} alt="Lama Dev Facebook Account" />
-        <Image src="/2.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
-        <Image src="/3.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
-        <Image src="/4.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
+      <FontAwesomeIcon icon={faGithub} />
+      <FontAwesomeIcon icon={faLinkedin} />
+      <FontAwesomeIcon icon={faDev} />
       </div>
     </div>
   );
