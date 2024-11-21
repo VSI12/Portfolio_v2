@@ -1,37 +1,6 @@
-.title{
-  font-size: 20px;
-  color: #444;
-  padding-bottom: 10px;
-}
-
-.name{
-  font-size: 50px;
-  font-weight: bold;
-  color: #000000;
-  padding-bottom: 10px;
-}
-
-.work{
-  font-size: 50px;
-  font-weight: bold;
-  color: #444;
-  padding-bottom: 10px;
-}
-
-.description{
-  font-size: 20px;
-  color: #444;
-  padding-bottom: 10px;
-}
-
 .container{
   border: 2px solid red;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   max-width: 1750px;
 
-
- 
 }
