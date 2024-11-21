@@ -1,32 +1,50 @@
+"use client"
+
 import Link from 'next/link'
 import React from 'react'
+import styles from "./navbar.module.css"
 
 const links = [
     {
+        id: 1,
         name: "Home",
-        link: "/"
+        url: "/"
     },
     {
+        id: 2,
         name: "About",
-        link: "/about"
+        url: "/about"
     },
     {
+        id: 3,
         name: "Projects",
-        link: "/projects"
+        url: "/projects"
     },
     {
+        id: 4,
         name: "Experiences",
-        link: "/experiences"
+        url: "/experiences"
     },
     {
+        id: 5,
         name: "Contact",
-        link: "/contact"
+        url: "/contact"
     },
 ]
 const Navbar = () => {
   return (
     <div>
-        <Link href="/">Victor.</Link>
+        <Link href="/" className={styles.logo}>
+            lamamia
+        </Link>
+        <div>
+            {/* <DarkModeToggle /> */}
+            {links.map((link) => (
+                <Link key={link.id} href={link.url} className={styles.link}>
+                    {link.name}
+                </Link>
+            ))}
+        </div>
     </div>
   )
 }
