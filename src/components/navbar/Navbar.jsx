@@ -1,4 +1,3 @@
-"use client"
 
 import Link from 'next/link'
 import React from 'react'
@@ -37,7 +36,7 @@ const Navbar = () => {
         <Link href="/" className={styles.logo}>
             Victor.
         </Link>
-        <div>
+        <div className={styles.links}> 
             {/* <DarkModeToggle /> */}
             {links.map((link) => (
                 <Link key={link.id} href={link.url} className={styles.link}>
