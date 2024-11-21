@@ -10,7 +10,7 @@ const Footer = () => {
       <a href="https://github.com/VSI12" target="_blank" rel="noopener noreferrer" >
         <FontAwesomeIcon icon={faGithub} className={styles.icon} />
       </a>
-      <a href="https://dev.to/yourprofile" target="_blank" rel="noopener noreferrer">
+      <a href="https://dev.to/non-existent" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faDev} className={styles.icon} />
       </a>
       <a href="https://www.linkedin.com/in/victor-iliya/" target="_blank" rel="noopener noreferrer">
