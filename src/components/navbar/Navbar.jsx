@@ -1,57 +1,48 @@
+"use client";  // For smooth client-side scroll behavior
 
-import Link from 'next/link'
-import React from 'react'
-import styles from "./navbar.module.css"
-import Image from 'next/image'
+import React from 'react';
+import styles from "./navbar.module.css";
+import Image from 'next/image';
 
 const links = [
-    {
-        id: 1,
-        name: "Home",
-        url: "/"
-    },
-    {
-        id: 2,
-        name: "About",
-        url: "/about"
-    },
-    {
-        id: 3,
-        name: "Projects",
-        url: "/projects"
-    },
-    {
-        id: 4,
-        name: "Experiences",
-        url: "/experiences"
-    },
-    {
-        id: 5,
-        name: "Contact",
-        url: "/contact"
-    },
-]
+  { id: 1, name: "Home", sectionId: "hero" },
+  { id: 2, name: "About", sectionId: "about" },
+  { id: 3, name: "Projects", sectionId: "projects" },
+  { id: 4, name: "Experiences", sectionId: "experiences" },
+  { id: 5, name: "Contact", sectionId: "contact" },
+];
+
 const Navbar = () => {
+  const handleScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });  // Smooth scroll effect
+    }
+  };
+
   return (
     <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-            <Image
-                src="/logo.png"
-                alt="logo"
-                width={75}
-                height={75}
-            />
-        </Link>
-        <div className={styles.links}> 
-            {/* <DarkModeToggle /> */}
-            {links.map((link) => (
-                <Link key={link.id} href={link.url} className={styles.link}>
-                    {link.name}
-                </Link>
-            ))}
-        </div>
+      <button onClick={() => handleScroll('hero')} className={styles.logo}>
+        <Image
+          src="/logo.png"
+          alt="logo"
+          width={75}
+          height={75}
+        />
+      </button>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <button
+            key={link.id}
+            onClick={() => handleScroll(link.sectionId)}  // Scroll to section
+            className={styles.link}
+          >
+            {link.name}
+          </button>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
