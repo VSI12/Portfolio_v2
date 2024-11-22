@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-
+/public/placeholder.jpg
 # next.js
 /.next/
 /out/
