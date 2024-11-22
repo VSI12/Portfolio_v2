@@ -1,4 +1,5 @@
 import React from 'react'
+import ViewCounter from './Counter'
 
 const Data = () => {
   return (
@@ -58,8 +59,12 @@ const Data = () => {
             </svg>
         </h1>
         <h3 className="home__subtitle">I build solutions for the cloud.</h3>
-        <p className="home__description">I’m a cloud engineer passionate about creating highly available and secure <br /> cloud solutions. Currently, I’m expanding my skill set to transition into <br /> DevOps, focusing on workflow automation, optimized deployments, <br /> and enhanced team collaboration for reliable software delivery.</p>
-        {/* <p className="home__description"> <ViewCounter /></p> */}
+        <p className="home__description">
+            I’m a cloud engineer passionate about creating highly available and secure <br /> 
+        cloud solutions. Currently, I’m expanding my skill set to transition into <br /> 
+        DevOps, focusing on workflow automation, optimized deployments, <br /> 
+        and enhanced team collaboration for reliable software delivery.</p>
+        <p className="home__description"><ViewCounter /></p>
 
         
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button button--flex">
