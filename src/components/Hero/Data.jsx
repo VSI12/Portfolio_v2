@@ -1,12 +1,13 @@
 import React from 'react'
 import ViewCounter from './Counter'
+import Styles from './hero.module.css'
 
 const Data = () => {
   return (
 
-        <div className="home__data">
-        <h3 className="home__sub">Hi, my name is</h3>
-        <h1 className="home__title">
+    <div className="home__data">
+        <h3 className={Styles.home__sub}>Hi, my name is</h3>
+        <h1 className={Styles.home__title}>
             Victor Iliya.
             <svg
                   width="36"
@@ -58,16 +59,14 @@ const Data = () => {
                   ></path>
             </svg>
         </h1>
-        <h3 className="home__subtitle">I build solutions for the cloud.</h3>
-        <p className="home__description">
-            I’m a cloud engineer passionate about creating highly available and secure <br /> 
+        <h3 className={Styles.home__subtitle}>I build solutions for the cloud.</h3>
+        <p className={Styles.home__description}>
+        I’m a cloud engineer passionate about creating highly available and secure <br /> 
         cloud solutions. Currently, I’m expanding my skill set to transition into <br /> 
         DevOps, focusing on workflow automation, optimized deployments, <br /> 
         and enhanced team collaboration for reliable software delivery.</p>
-        <p className="home__description"><ViewCounter /></p>
-
         
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button button--flex">
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${Styles.button} ${Styles.button__flex}`}>
             Resume
             <svg
                   className="button__icon"
@@ -88,6 +87,8 @@ const Data = () => {
             </svg>
             {/* <i className="uil uil-message button__icon"></i> */}
         </a>
+
+        <p className={Styles.ViewCounter}><ViewCounter /></p>
 
         
 
