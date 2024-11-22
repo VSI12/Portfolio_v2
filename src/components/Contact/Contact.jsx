@@ -3,7 +3,9 @@ import styles from './Contact.module.css'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+      <section className={styles.section} id="contact">
+        <h2 className={styles.title}>Contact</h2>
+      </section>
   )
 }
 

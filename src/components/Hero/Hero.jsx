@@ -4,7 +4,7 @@ import Data from './Data'
 
 const Hero = () => {
   return (
-    <section className={`${styles.home} ${styles.section}`} id="home">
+    <section className={`${styles.home} ${styles.section}`} id="hero">
     <div className={`${styles.home__container} ${styles.container} ${styles.grid}`}>
       <div className={`${styles.home__content} ${styles.grid}`}>
         <Data />

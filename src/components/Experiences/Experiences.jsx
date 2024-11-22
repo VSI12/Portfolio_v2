@@ -3,7 +3,9 @@ import styles from './Experiences.module.css'
 
 const Experiences = () => {
   return (
-    <div>Experiences</div>
+    <section className={styles.section} id="experiences">
+      <h2 className={styles.title}>Experiences</h2>
+    </section>
   )
 }
 
