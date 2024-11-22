@@ -5,3 +5,25 @@
   max-width: 1750px;
 
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;  /* Smooth scrolling for the whole page */
+}
+
+.section {
+  height: 100vh;            /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  scroll-snap-align: start;  /* Optional: Snap each section to view */
+}
+
+.section:nth-child(odd) {
+  background-color: #f0f0f0;  /* Alternate background for sections */
+}
+
+.section:nth-child(even) {
+  background-color: #e0e0e0;
+}
