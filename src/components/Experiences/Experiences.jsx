@@ -68,10 +68,26 @@ const Experiences = () => {
                   2019 - 2024
                 </div>
               </div>
-
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
             </div>
 
-            {/* Add more education entries similarly */}
+            <div className={styles.qualification__data}>
+              <div>
+                <h3 className={styles.qualification__title}>Premiere Academy, Lugbe, Abuja</h3>
+                <span className={styles.qualification__subtitle}>Senior School Certificate</span>
+                <div className={styles.qualification__calendar}>
+                  <i className={`${styles.uil} ${styles["uil-calendar-alt"]}`}></i>
+                  2013 - 2019
+                </div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
           </div>
 
           {/* Experience Section */}
