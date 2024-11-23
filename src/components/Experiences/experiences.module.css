@@ -19,6 +19,23 @@
   .section__subtitle {
     text-align: center;
   }
+
+.section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 130px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+.section__title::before {
+    left: clamp(35%, 35%, 55%);      /* Adjusts dynamically */
+}
+
+.section__title::after {
+    right: clamp(35%, 35%, 55%);
+}
 .qualification__container {
     max-width: 768px;
     display: block;
@@ -122,7 +139,6 @@
         margin-right: auto;
     }
   }
-  
   /* For medium devices */
   @media screen and (max-width: 768px) {
     .qualification__container{
@@ -130,7 +146,7 @@
         margin-right: var(--mb-1-5);
     }
 
-    .section__title::before,
+.section__title::before,
 .section__title::after {
     content: '';
     position: absolute;
@@ -139,13 +155,11 @@
     background-color: black;  /* Color of the line */
     top: 50%;                 /* Align to the vertical center of the text */
 }
-
 .section__title::before {
-    left: 25%;              /* Position the left line */
+    left: 15%;              /* Position the left line */
 }
-
 .section__title::after {
-    right: 25%;             /* Position the right line */
+    right: 15%;             /* Position the right line */
 }
   }
   
@@ -158,25 +172,6 @@
         margin: 0 var(--mb-0-75);
     }
   }
-  .section__title::before,
-.section__title::after {
-    content: '';
-    position: absolute;
-    width: 100px;              /* Length of the line on each side */
-    height: 1px;              /* Thickness of the line */
-    background-color: black;  /* Color of the line */
-    top: 50%;                 /* Align to the vertical center of the text */
-}
-
-.section__title::before {
-    left: 10%;              /* Position the left line */
-}
-
-.section__title::after {
-    right: 10%;             /* Position the right line */
-}
-
-  
   /* For small devices */
   @media screen and (max-width: 350px) {
     .qualification__data{
