@@ -3,7 +3,7 @@
 import { useState } from "react";
 import styles from "./experiences.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarDays,faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarDays,faGraduationCap, faBriefcase, faCertificate} from '@fortawesome/free-solid-svg-icons'
 
 const Experiences = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -24,7 +24,7 @@ const Experiences = () => {
             : styles.qualification__button
             } onClick={() => toggleTab(1)}>
 
-            <i className={`${styles.uil} ${styles["uil-graduation-cap"]} ${styles.qualification__icon}`}></i>
+            <FontAwesomeIcon icon={faGraduationCap}/>
 
             Education
 
@@ -35,7 +35,7 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(2)}>
 
-            <i className={`${styles.uil} ${styles["uil-briefcase-alt"]} ${styles.qualification__icon}`}></i>
+            <FontAwesomeIcon icon={faBriefcase}/>
 
             Experiences
 
@@ -46,7 +46,7 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(3)}>
 
-            <i className={`${styles.uil} ${styles["uil-briefcase-alt"]} ${styles.qualification__icon}`}></i>
+            <FontAwesomeIcon icon={faCertificate} />
 
             Certifications
 
