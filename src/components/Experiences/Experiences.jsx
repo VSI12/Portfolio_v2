@@ -1,7 +1,9 @@
 "use client"; // Add this if using Next.js 13+ with App Router
 
 import { useState } from "react";
-import styles from "./experiences.module.css"; // Use CSS Modules
+import styles from "./experiences.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarDays,faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const Experiences = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -64,13 +66,13 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
                 <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
                 <div className={styles.qualification__calendar}>
-                  <i className={`${styles.uil} ${styles["uil-calendar-alt"]}`}></i>
+                <FontAwesomeIcon icon={faCalendarDays}/>
                   2019 - 2024
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+                <span className={styles.qualification__rounder}></span>
+                <span className={styles. qualification__line}></span>
               </div>
             </div>
 
@@ -79,13 +81,13 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>Premiere Academy, Lugbe, Abuja</h3>
                 <span className={styles.qualification__subtitle}>Senior School Certificate</span>
                 <div className={styles.qualification__calendar}>
-                  <i className={`${styles.uil} ${styles["uil-calendar-alt"]}`}></i>
+                <FontAwesomeIcon icon={faCalendarDays}/>
                   2013 - 2019
                 </div>
               </div>
               <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
+              <span className={styles.qualification__rounder}></span>
+              <span className={styles. qualification__line}></span>
               </div>
             </div>
           </div>
