@@ -1,51 +1,32 @@
 .section {
     padding: 6rem 0 2rem;
     border: 2px solid red;
-}
-.section__title {
-    font-size: 32px;
-    color: var(--title-color);
+  }
+  .section__title {
+    font-size: var(--section-title-size);
+    color: var(--section-title-color);
     position: relative;       /* Establish positioning context */
     text-align: center;       /* Center the text */
     margin: 1rem 0;           /* Add some vertical spacing */
-
-}
-.section__title::before,
-.section__title::after {
-    content: '';
-    position: absolute;
-    width: 100px;              /* Length of the line on each side */
-    height: 1px;              /* Thickness of the line */
-    background-color: black;  /* Color of the line */
-    top: 50%;                 /* Align to the vertical center of the text */
-}
-
-.section__title::before {
-    left: 25%;              /* Position the left line */
-}
-
-.section__title::after {
-    right: 25%;             /* Position the right line */
-}
-.section__subtitle {
+  }
+  .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: 4rem;
-}
-.section__title,
+    color: var(--section-subtitle-color);
+  }
+  .section__title,
   .section__subtitle {
     text-align: center;
-}
+  }
 .qualification__container {
     max-width: 768px;
-    border: 2px solid rgb(68, 0, 255);
     display: block;
     margin: 0 auto;  /* Center the container */
 }
 .qualification__tabs {
     display: flex;
     justify-content: center;
-    gap: 50px;
     margin-bottom: 30px;
 }
 .qualification__button {
@@ -102,11 +83,12 @@
 .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+
 }
 
 .qualification__subtitle {
     display: inline-block;
-    font-size: #5e5e5e;
+    color: #5e5e5e;
     margin-bottom:10px;
 }
 
@@ -147,10 +129,27 @@
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
     }
- 
+
+    .section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 100px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+
+.section__title::before {
+    left: 25%;              /* Position the left line */
+}
+
+.section__title::after {
+    right: 25%;             /* Position the right line */
+}
   }
   
-  @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .qualification__sections{
         grid-template-columns: initial;
     }
@@ -159,11 +158,48 @@
         margin: 0 var(--mb-0-75);
     }
   }
+  .section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 100px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+
+.section__title::before {
+    left: 10%;              /* Position the left line */
+}
+
+.section__title::after {
+    right: 10%;             /* Position the right line */
+}
+
   
   /* For small devices */
   @media screen and (max-width: 350px) {
     .qualification__data{
         gap: .5rem;
     }
+
+    .section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 100px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+
+.section__title::before {
+    left: 10%;              /* Position the left line */
+}
+
+.section__title::after {
+    right: 10%;             /* Position the right line */
+}
+
   }
   
