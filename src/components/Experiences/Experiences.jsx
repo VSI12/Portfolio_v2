@@ -13,7 +13,7 @@ const Experiences = () => {
   };
 
   return (
-    <section className={styles.qualification}>
+    <section className={`${styles.qualification} ${styles.section}`} id="experiences">
       <h2 className={styles.section__title}>Experiences</h2>
       <span className={styles.section__subtitle}>My Personal Journey</span>
 
@@ -60,7 +60,7 @@ const Experiences = () => {
                 ? `${styles.qualification__content} ${styles.qualification__content_active}`
                 : styles.qualification__content
             }>
-            {/* Repeat Education Entries */}
+
             <div className={styles.qualification__data}>
               <div>
                 <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>

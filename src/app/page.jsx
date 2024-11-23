@@ -7,7 +7,7 @@ import Experiences from "@/components/Experiences/Experiences";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Hero/>
       <About/>
       <Contact/>
