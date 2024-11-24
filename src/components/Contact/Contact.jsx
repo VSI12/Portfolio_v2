@@ -14,7 +14,7 @@ const Contact = () => {
              I&#39;ll do my best to respond quickly!
           </div>
           <div className={styles.button__container}>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.type_C}`}>
+              <a href="mailto:victoriliya15@gmail.com" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.type_C}`}>
                 <div class={styles.button__line}></div>
                 <div class={styles.button__line}></div>
                 <span class={styles.button__text}>Say Hello</span>
