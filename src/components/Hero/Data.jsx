@@ -61,9 +61,9 @@ const Data = () => {
         </h1>
         <h3 className={Styles.home__subtitle}>I build solutions for the cloud.</h3>
         <p className={Styles.home__description}>
-        I’m a cloud engineer passionate about creating highly available and secure <br /> 
+        I’m a <span className={Styles.home__highlight}>Cloud Engineer </span>passionate about creating highly available and secure <br /> 
         cloud solutions. Currently, I’m expanding my skill set to transition into <br /> 
-        DevOps, focusing on workflow automation, optimized deployments, <br /> 
+        <span className={Styles.home__highlight}>DevOps</span>, focusing on workflow automation, optimized deployments, <br /> 
         and enhanced team collaboration for reliable software delivery.</p>
         
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${Styles.button} ${Styles.button__flex}`}>
