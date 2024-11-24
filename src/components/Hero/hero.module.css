@@ -8,15 +8,15 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
-    border: 2px solid red;
-  }
+    border: 2px solid rgb(0, 38, 255);
+}
 .home__container{
     row-gap: 7em;
 }
 .home__content{
     grid-template-columns: 120px repeat(2, 1fr);
     column-gap: 2rem;
-    padding-top: 5.5rem;
+    padding: 1rem 0;
     align-items: center;
 }
 .home__sub{
@@ -41,16 +41,6 @@
     margin-left: 0 ;
     padding-left: 0;
 }
-
-/* .home__subtitle::before{
-    content: '';
-    position: absolute;
-    width: 70px;
-    height: 1px;
-    background-color: var(--text-color);
-    left: 0;
-    top: 1rem;
-} */
 
 .home__description{
     color: var(--first-color);
