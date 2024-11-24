@@ -1,6 +1,6 @@
 "use client";  // For smooth client-side scroll behavior
 
-import React from 'react';
+import { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import Image from 'next/image';
 
@@ -13,35 +13,51 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+  const [activeNav, setActiveNav] = useState("hero");  // Default active section
+
+  // Scroll effect to add 'scroll-header' class
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(`.${styles.container}`);
+      if (window.scrollY >= 80) {
+        header.classList.add(styles.scrollHeader);
+      } else {
+        header.classList.remove(styles.scrollHeader);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, []);
+
+  // Smooth scroll and set active link
   const handleScroll = (sectionId) => {
+    setActiveNav(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });  // Smooth scroll effect
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <button onClick={() => handleScroll('hero')} className={styles.logo}>
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={75}
-          height={75}
-        />
+        <Image src="/logo.png" alt="logo" width={75} height={75} />
       </button>
-      <div className={styles.links}>
+      <div className={`${styles.links} ${toggle ? styles.showMenu : ""}`}>
         {links.map((link) => (
           <button
             key={link.id}
-            onClick={() => handleScroll(link.sectionId)}  // Scroll to section
-            className={styles.link}
+            onClick={() => handleScroll(link.sectionId)}
+            className={`${styles.link} ${activeNav === link.sectionId ? styles.activeLink : ""}`}
           >
             {link.name}
           </button>
         ))}
+        <div className={styles.close} onClick={() => setToggle(!toggle)}>✖</div>
       </div>
-    </div>
+      <div className={styles.toggle} onClick={() => setToggle(!toggle)}>☰</div>
+    </header>
   );
 };
 
