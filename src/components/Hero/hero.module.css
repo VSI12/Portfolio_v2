@@ -101,6 +101,7 @@
     letter-spacing: 2px;
     transition: all 0.3s ease;
     border-radius: 300px;
+    margin: 20px 0;
   }
   .button__text {
     display: flex;
