@@ -32,7 +32,7 @@ const ViewCounter = () => {
     <div>
       {loading ? (
         <p>Loading...</p>
-      ) : error ? (
+      ) : error ? ( 
         <p>Error: {error}</p>
       ) : (
         <p>Page Views: {views}</p>

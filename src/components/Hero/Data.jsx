@@ -76,7 +76,7 @@ const Data = () => {
           </a>
         </div>
 
-        <p className={Styles.ViewCounter}><ViewCounter /></p>
+        <p className={Styles.home__counter}><ViewCounter /></p>
     </div>
   )
 }

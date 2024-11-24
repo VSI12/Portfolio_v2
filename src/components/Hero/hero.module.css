@@ -47,12 +47,17 @@
 .home__description{
     color: #4A4A4A;
     font-weight: 600;;
-    font-size: 22px;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
     padding-bottom: 10px;
 }
 .home__highlight{
     color: #006CE0;
     font-weight: 700;
+}
+.home__counter{
+    color: #000000;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .home__scroll{
@@ -354,7 +359,6 @@
     }
    .home__description{
     max-width: initial;
-    margin-bottom: var(--mb-2-5);
    }
    .home__img{
     width: 250px;
@@ -367,10 +371,19 @@
   
 }
   /* For medium devices */
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 4rem 0 2rem;
+      }
     .home__content{
         grid-template-columns: 0.5fr 3fr;
         padding-top: 3.5rem;
+    }
+    .home__title, .home__subtitle{
+        font-size: 30px;
+    }
+    .home__description{
+        font-size: 15px;
     }
     .home__img{
         order: initial;
@@ -387,9 +400,15 @@
     .home__scroll{
         display: none;
     }
+    .button{
+        font-size: 15px;
+    }
+    .home__counter{
+        color: #000000;
+        font-weight: 700;
+        font-size: 15px;
+    }
 }
-  
-
   /* For small devices */
   @media screen and (max-width: 350px) {
    .home__img{
