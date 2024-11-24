@@ -13,8 +13,14 @@ const Contact = () => {
             just want to say hello, feel free to drop me a message. <br />
              I&#39;ll do my best to respond quickly!
           </div>
-          <div className={styles.contact__button}>
-
+          <div className={styles.button__container}>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.type_C}`}>
+                <div class={styles.button__line}></div>
+                <div class={styles.button__line}></div>
+                <span class={styles.button__text}>Say Hello</span>
+                <div class={styles.button__drow1}></div>
+                <div class={styles.button__drow2}></div>
+              </a> 
           </div>
         </div>
       </section>
