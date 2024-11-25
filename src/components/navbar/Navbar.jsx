@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import { useRouter } from 'next/navigation' // Pathname not required
+import { useRouter } from 'next/navigation'
 import styles from './navbar.module.css'
 
 const links = [
@@ -21,7 +21,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY >= 80) // Set header scroll effect
+      setIsScrolled(window.scrollY >= 80)
 
       const scrollPosition = window.scrollY + 200
       for (let i = links.length - 1; i >= 0; i--) {
@@ -43,15 +43,29 @@ export default function Navbar() {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      router.push(`/#${sectionId}`, { scroll: false }) // Updates URL without scrolling
+      router.push(`/#${sectionId}`, { scroll: false })
     }
   }
+
+  const reloadPage = () => {
+    router.push('/', { scroll: false }) // Navigate to home path
+    router.refresh() // Reload the page
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }) // Smooth scroll to top
+    router.push('/', { scroll: false }) // Update URL to home path without reloading
+  }
+
+  useEffect(() => {
+    
+  })  
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <button
-          onClick={() => navigateToSection('hero')}
+          onClick={scrollToTop}
           className={styles.logoButton}
           aria-label='Go to home section'
         >
