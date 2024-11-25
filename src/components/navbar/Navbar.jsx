@@ -3,47 +3,47 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import styles from './Navbar.module.css'
+import { useRouter } from 'next/navigation' // Pathname not required
+import styles from './navbar.module.css'
 
 const links = [
-  { id: 1, name: 'Home', sectionId: 'hero' },
-  { id: 2, name: 'About', sectionId: 'about' },
-  { id: 3, name: 'Projects', sectionId: 'projects' },
-  { id: 4, name: 'Experiences', sectionId: 'experiences' },
-  { id: 5, name: 'Contact', sectionId: 'contact' },
+  { id: 1, name: 'About', sectionId: 'about' },
+  { id: 2, name: 'Projects', sectionId: 'projects' },
+  { id: 3, name: 'Experiences', sectionId: 'experiences' },
+  { id: 4, name: 'Contact', sectionId: 'contact' },
 ]
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeNav, setActiveNav] = useState('hero')
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY >= 80)
-      // Highlight the active section based on scroll position
-      const scrollPosition = window.scrollY + 200
+      setIsScrolled(window.scrollY >= 80) // Set header scroll effect
 
-      links.forEach((link) => {
-        const section = document.getElementById(link.sectionId)
+      const scrollPosition = window.scrollY + 200
+      for (let i = links.length - 1; i >= 0; i--) {
+        const section = document.getElementById(links[i].sectionId)
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveNav(link.sectionId)
+          setActiveNav(links[i].sectionId)
+          break
         }
-      })
+      }
     }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleScroll = (sectionId) => {
+  const navigateToSection = (sectionId) => {
     setActiveNav(sectionId)
     setIsMenuOpen(false)
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      // Update the URL path without reloading
-      const newPath = sectionId === 'hero' ? '/' : `/${sectionId}`
-      window.history.pushState(null, '', newPath)
+      router.push(`/#${sectionId}`, { scroll: false }) // Updates URL without scrolling
     }
   }
 
@@ -51,7 +51,7 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <button
-          onClick={() => handleScroll('hero')}
+          onClick={() => navigateToSection('hero')}
           className={styles.logoButton}
           aria-label='Go to home section'
         >
@@ -62,7 +62,7 @@ export default function Navbar() {
           {links.map((link) => (
             <button
               key={link.id}
-              onClick={() => handleScroll(link.sectionId)}
+              onClick={() => navigateToSection(link.sectionId)}
               className={`${styles.navLink} ${
                 activeNav === link.sectionId ? styles.activeLink : ''
               }`}
@@ -77,11 +77,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
-          {isMenuOpen ? (
-            <X className={styles.menuIcon} />
-          ) : (
-            <Menu className={styles.menuIcon} />
-          )}
+          {isMenuOpen ? <X className={styles.menuIcon} /> : <Menu className={styles.menuIcon} />}
         </button>
       </div>
     </header>
