@@ -69,7 +69,7 @@ export default function Navbar() {
           className={styles.logoButton}
           aria-label='Go to home section'
         >
-          <Image src='/logo.png' alt='Logo' width={75} height={75} />
+          <Image src='/logo.png' alt='Logo' width={70} height={70} />
         </button>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.menuOpen : ''}`}>
