@@ -10,9 +10,9 @@ const About = () => {
         <div className={`${styles.about__container} ${styles.container} ${styles.grid}`}>
           <div className={styles.about__img}>
             <Image
-              src="/placeholder.jpg"
+              src="/user.png"
               alt="About Image"
-              className={styles.about__img}
+              className={styles.about__user}
               width={200}
               height={200}
             />
