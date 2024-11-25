@@ -1,5 +1,5 @@
 .section {
-    padding: 6rem 0 2rem;
+    padding: 10rem 0 2rem;
     /* border: 2px solid red; */
   }
 
@@ -373,7 +373,7 @@
   /* For medium devices */
 @media screen and (max-width: 768px) {
     .section {
-        padding: 4rem 0 2rem;
+        padding: 6rem 0 2rem;
       }
     .home__content{
         grid-template-columns: 0.5fr 3fr;
