@@ -24,7 +24,7 @@ const Experiences = () => {
             : styles.qualification__button
             } onClick={() => toggleTab(1)}>
 
-            <FontAwesomeIcon icon={faGraduationCap}/>
+            <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon}/>
 
             Education
 
@@ -35,7 +35,7 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(2)}>
 
-            <FontAwesomeIcon icon={faBriefcase}/>
+            <FontAwesomeIcon icon={faBriefcase} className={styles.qualification__icon}/>
 
             Experiences
 
@@ -46,7 +46,7 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(3)}>
 
-            <FontAwesomeIcon icon={faCertificate} />
+            <FontAwesomeIcon icon={faCertificate} className={styles.qualification__icon}/>
 
             Certifications
 
@@ -66,7 +66,7 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
                 <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
                 <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays}/>
+                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   2019 - 2024
                 </div>
               </div>
@@ -81,7 +81,7 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>Premiere Academy, Lugbe, Abuja</h3>
                 <span className={styles.qualification__subtitle}>Senior School Certificate</span>
                 <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays}/>
+                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   2013 - 2019
                 </div>
               </div>
@@ -103,7 +103,7 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>Information Systems Intern</h3>
                 <span className={styles.qualification__subtitle}>Transcorp Hilton, Abuja</span>
                 <div className={styles.qualification__calendar}>
-                  <i className={`${styles.uil} ${styles["uil-calendar-alt"]}`}></i>
+                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   May 2023 - October 2023
                 </div>
               </div>
@@ -121,7 +121,7 @@ const Experiences = () => {
                 <h3 className={styles.qualification__title}>AWS</h3>
                 <span className={styles.qualification__subtitle}>Transcorp Hilton, Abuja</span>
                 <div className={styles.qualification__calendar}>
-                  <i className={`${styles.uil} ${styles["uil-calendar-alt"]}`}></i>
+                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   May 2023 - October 2023
                 </div>
               </div>
