@@ -43,7 +43,7 @@ const Projects = () => {
                 <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
                   <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
                 </a>
-                <a href="https://github.com/VSI12/IDS-Architecture" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                <a href="https://dev.to/non-existent/deploying-a-flask-based-intrusion-detection-system-to-aws-ecs-project-summary-1m1m" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
                   <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
                 </a>
               </div>

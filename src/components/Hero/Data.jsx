@@ -8,7 +8,7 @@ const Data = () => {
     <div className={Styles.home__data}>
         <h3 className={Styles.home__sub}>Hi, my name is</h3>
         <h1 className={Styles.home__title}>
-            Hey Mualim
+            Victor Iliya
             <svg
                   width="50"
                   height="50"
