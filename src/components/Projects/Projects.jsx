@@ -27,7 +27,7 @@ const Projects = () => {
               Deployed to AWS
               </div>
               <div className={styles.projects__description}>
-              <p className={styles.projects__text}>
+                <p className={styles.projects__text}>
                 A proof of concept flask web-app based on the NSL-Kdd dataset for network data calssification
                 Users upload network traffic data files, and the app processes and classifies this data to detect potential security threats or anomalies
               </p>
