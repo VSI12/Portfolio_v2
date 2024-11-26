@@ -99,12 +99,17 @@
   padding-bottom: 11px;
 }
 .projects__link{
-  display: flex;
-  font-size: 1.5rem;
-  width: 35px;
-  height: 35px;
+  display: inline-block;
+  width: 24px;  /* Set width */
+  height: 24px; /* Set height */
+  font-size: 24px;
   color: rgb(82, 82, 82);
   transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+.projects__link:hover{
+  color: #000;
+  transform: translateY(-5px);
 }
 
 
