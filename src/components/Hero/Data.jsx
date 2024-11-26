@@ -8,7 +8,7 @@ const Data = () => {
     <div className={Styles.home__data}>
         <h3 className={Styles.home__sub}>Hi, my name is</h3>
         <h1 className={Styles.home__title}>
-            Victor Iliya
+            Hey Mualim
             <svg
                   width="50"
                   height="50"
@@ -68,11 +68,11 @@ const Data = () => {
         
         <div className={Styles.button__container}>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${Styles.button} ${Styles.type_C}`}>
-            <div class={Styles.button__line}></div>
-            <div class={Styles.button__line}></div>
-            <span class={Styles.button__text}>RESUME</span>
-            <div class={Styles.button__drow1}></div>
-            <div class={Styles.button__drow2}></div>
+            <div className={Styles.button__line}></div>
+            <div className={Styles.button__line}></div>
+            <span className={Styles.button__text}>RESUME</span>
+            <div className={Styles.button__drow1}></div>
+            <div className={Styles.button__drow2}></div>
           </a>
         </div>
 
