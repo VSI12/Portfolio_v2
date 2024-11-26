@@ -58,8 +58,14 @@
 }
 
 .qualification__icon {
-    font-size: 1.8rem;
-    margin-right: var(--mb-0-25);
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.qualification__calendar__icon{
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
 }
 
 .qualification__active {
