@@ -27,16 +27,18 @@ const Projects = () => {
               Deployed to AWS
               </div>
               <div className={styles.projects__description}>
-              A proof of concept flask web-app based on the NSL-Kdd dataset for network data calssification
-              Users upload network traffic data files, and the app processes and classifies this data to detect potential security threats or anomalies
+              <p className={styles.projects__text}>
+                A proof of concept flask web-app based on the NSL-Kdd dataset for network data calssification
+                Users upload network traffic data files, and the app processes and classifies this data to detect potential security threats or anomalies
+              </p>
               </div>
               <div className={styles.projects__techstacks}>
                 <ul className={styles.techstacks__list}>
-                  <li>Flask</li>
+                  <li className={styles.AWS}>AWS</li>
                   <li>Python</li>
                   <li>Docker</li>
                   <li>ECS (Fargate)</li>
-                  <li>AWS</li>
+                  <li>Flask</li>
                 </ul>
               </div>
               <div className={styles.projects__links}>

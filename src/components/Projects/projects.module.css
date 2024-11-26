@@ -44,14 +44,10 @@
 
 .projects__container {
   max-width:996px;
-  /* display: flex;
-  justify-content:center; */
   margin-bottom: 50px;
   margin: 0 auto;  /* Center the container */
-  border: 2px solid red;
 }
 .projects__card{
-  border: 2px solid blue;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 1rem;
@@ -82,6 +78,13 @@
 
   .techstacks__list li{
     margin-right: 1rem;        /* Adds space between list items */
+    font-weight: 600;
+  }
+  .AWS{
+    background-color: #4A4A4A;
+    color: #f2f2f2;
+    padding: 2px 5px;
+    border-radius: 5px;
   }
 
 .projects__title{
@@ -105,6 +108,10 @@
   padding-bottom: 11px;
   border: 2px solid #4A4A4A;
   border-radius: 10px;
+  background-color: #f2f2f2;
+}
+.projects__text{
+  padding: 5px;
 }
 .projects__links{
   display: flex;
