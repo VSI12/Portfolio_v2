@@ -71,6 +71,33 @@
     background-color: aliceblue;
   }
 
+  .techstacks__list{
+    list-style: none;          /* Removes bullet points */
+    padding: 0;                /* Removes default padding */
+    margin: 0;                 /* Removes default margin */
+    display: flex;  
+  }
+
+  .techstacks__list li{
+    margin-right: 1rem;        /* Adds space between list items */
+  }
+/* .projects__links{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 5rem;
+} */
+
+.projects__link{
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  color: rgb(82, 82, 82);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
 
 
 @media screen and (max-width: 992px) {

@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './projects.module.css'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faDev } from '@fortawesome/free-brands-svg-icons';
+
+
 const Projects = () => {
   return (
     <section className={styles.section} id="projects">
@@ -14,8 +19,34 @@ const Projects = () => {
             </div>
 
             <div className={styles.projects__data}>
-            A proof of concept flask web-app based on the NSL-Kdd dataset for network data calssification
-            Users upload network traffic data files, and the app processes and classifies this data to detect potential security threats or anomalies
+              <div className={styles.projects__subtitle}>
+                Featured Project
+              </div>
+              <div className={styles.projects__title}>
+              Intrusion Detection System <br />
+              Deployed to AWS
+              </div>
+              <div className={styles.projects__description}>
+              A proof of concept flask web-app based on the NSL-Kdd dataset for network data calssification
+              Users upload network traffic data files, and the app processes and classifies this data to detect potential security threats or anomalies
+              </div>
+              <div className={styles.projects__techstacks}>
+                <ul className={styles.techstacks__list}>
+                  <li>Flask</li>
+                  <li>Python</li>
+                  <li>Docker</li>
+                  <li>ECS (Fargate)</li>
+                  <li>AWS</li>
+                </ul>
+              </div>
+              <div className={styles.projects__links}>
+                <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
+                </a>
+                <a href="https://github.com/VSI12/IDS-Architecture" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
