@@ -315,6 +315,26 @@
   margin-bottom: 64px;
 }
 
+  /* For medium devices */
+@media screen and (max-width: 1540px) {
+  .section__title::before {
+        left: 30%;              /* Position the left line */
+  }
+  .section__title::after {
+        right: 30%;             /* Position the right line */
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .section__title::before {
+    left: 25%;              /* Position the left line */
+  }
+  .section__title::after {
+    right: 25%;             /* Position the right line */
+  }
+}
+    
+
 
   /* For medium devices */
 @media screen and (max-width: 768px) {
