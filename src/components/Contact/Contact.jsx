@@ -15,11 +15,11 @@ const Contact = () => {
           </div>
           <div className={styles.button__container}>
               <a href="mailto:victoriliya15@gmail.com" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.type_C}`}>
-                <div class={styles.button__line}></div>
-                <div class={styles.button__line}></div>
-                <span class={styles.button__text}>Say Hello</span>
-                <div class={styles.button__drow1}></div>
-                <div class={styles.button__drow2}></div>
+                <div className={styles.button__line}></div>
+                <div className={styles.button__line}></div>
+                <span className={styles.button__text}>Say Hello</span>
+                <div className={styles.button__drow1}></div>
+                <div className={styles.button__drow2}></div>
               </a> 
           </div>
         </div>
