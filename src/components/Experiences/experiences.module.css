@@ -133,13 +133,13 @@
     width: 100%;  /* Ensures the container can resize fluidly */
     display: flex;  /* Ensures the flex items don't wrap when resizing */
     margin: 0 auto;  
-    border: 2px solid red;
 }
 .work__tabs {
     display: flex;
     flex-direction: column;
     gap: 3px;
     text-wrap: nowrap;
+    padding-top: 5px;
 }
 .work__sections {
     display: flex;
@@ -150,6 +150,15 @@
 }
 .work__content_active {
     display: block;
+}
+.work__title{
+    font-weight: 700;;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
+}
+.work__subtitle{
+    font-weight: 500;
+    color: #5e5e5e;
+    margin-bottom: 100px;
 }
 .work__tab_text{
     font-size: 16px;
@@ -202,6 +211,10 @@
     display: flex;
     flex-wrap: wrap;  /* Allow wrapping but control it better */
     gap: 10px;  /* Adjust space between list items */
+    color: #4A4A4A;
+    font-weight: 600;;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
+    margin-top: 25px;
 }
 .work__list li {
     flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
@@ -214,7 +227,7 @@
     content: ''; /* Creates a pseudo-element */
     position: absolute;
     left: 0; /* Align the bullet with the left side of the list item */
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%); /* Vertically centers the bullet */
     width: 16px; /* Size of the custom bullet */
     height: 16px; /* Size of the custom bullet */
@@ -223,7 +236,9 @@
     background-repeat: no-repeat; /* Prevents the bullet from repeating */
  }
 
-
+.highlights{
+    color:#006CE0;
+}
 /* CERTIFICATION EXPERINCE SECTION */
 .certifications__cards{
     max-width: 996px;

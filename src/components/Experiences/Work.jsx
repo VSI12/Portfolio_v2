@@ -34,7 +34,7 @@ const Work = () => {
                 <div className={styles.work__data_tab}>
                     <div className={styles.work__tab_rounder}>
                       <span className={toggleState === 2 ? `${styles.work__rounder} ${styles.activeRounder}` : styles.work__rounder}></span>
-                      <span className={styles.work__line}></span>
+                      {/* <span className={styles.work__line}></span> */}
                     </div>
                     <div className={styles.work__tab_text}>
                       IHVN
@@ -51,7 +51,10 @@ const Work = () => {
             }>
             <div className={styles.work__data}>
               <div>
-                <h3 className={styles.work__title}>Transcorp Hilton, Abuja</h3>
+                <h3 className={styles.work__title}>Information Systems intern 
+                  <a href="https://www.hilton.com/en/hotels/abuhitw-transcorp-hilton-abuja/" target="_blank" rel="noopener noreferrer">
+                  <span className={styles.highlights}>@Transcorp Hilton, Abuja</span></a>
+                </h3>
                 <span className={styles.work__subtitle}>May 2023 - September 2023</span>
                 <ul className={styles.work__list}>
                   <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
@@ -71,7 +74,10 @@ const Work = () => {
             }>
             <div className={styles.work__data}>
               <div>
-                <h3 className={styles.work__title}>Institute of Human Virology, Nigeria</h3>
+              <h3 className={styles.work__title}>Intern 
+                  <a href="https://ihvnigeria.org/" target="_blank" rel="noopener noreferrer">
+                  <span className={styles.highlights}> @Institute of Human Virology, Nigeria</span></a>
+                </h3>
                 <span className={styles.work__subtitle}>June 2022 - September 2022</span>
                 <ul className={styles.work__list}>
                   <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
