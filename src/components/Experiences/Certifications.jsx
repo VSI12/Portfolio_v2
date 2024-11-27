@@ -9,7 +9,7 @@ const Certifications = () => {
   return (
     <div className={styles.certifications__cards}>
         <div className={styles.certification}>
-            <a href="https://www.credly.com/earner/earned/badge/c9003c46-d666-457d-9d44-b6cd1dec3653" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.credly.com/badges/c9003c46-d666-457d-9d44-b6cd1dec3653/" target="_blank" rel="noopener noreferrer">
                 <div className={styles.card}>
                     <div className={styles.topsection}>
                         <div className={styles.border}></div>
@@ -52,7 +52,7 @@ const Certifications = () => {
 
         
         <div className={styles.certification}>
-            <a href="https://www.credly.com/earner/earned/badge/bc27d052-e7de-4c91-9568-9321f5e137c6" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.credly.com/badges/bc27d052-e7de-4c91-9568-9321f5e137c6/" target="_blank" rel="noopener noreferrer">
                 <div className={styles.card}>
                     <div className={styles.topsection}>
                         <div className={styles.border}></div>
