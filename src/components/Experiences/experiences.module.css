@@ -11,7 +11,7 @@
   .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     color: var(--section-subtitle-color);
   }
   .section__title,
@@ -43,7 +43,7 @@
 .qualification__tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 6rem;
 }
 .qualification__button {
     font-size: var(--h3-font-size);
