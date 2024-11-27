@@ -1,6 +1,5 @@
 .section {
     padding: 6rem 0 2rem;
-    border: 2px solid red;
   }
   .section__title {
     font-size: var(--section-title-size);
@@ -165,12 +164,13 @@
   }
   
   .card .topsection {
-    height: 150px;
+    height: 200px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(45deg, rgb(4, 159, 187) 0%, rgb(80, 246, 255) 100%);
+    background: white;
     position: relative;
+    
   }
   
   .card .topsection .border {
@@ -212,9 +212,9 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 30px;
+    padding-right: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   
   .card .topsection .icons .logo {
@@ -234,15 +234,24 @@
     gap: 7px;
   }
   
-  .card .topsection .icons .socialmedia .svg {
-    height: 100%;
-    fill: #1b233d;
+  .card .topsection .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;              /* Takes full width of the parent */
   }
-  
-  .card .topsection .icons .socialmedia .svg:hover {
-    fill: white;
+  .card .topsection .imageContainer image {
+    max-width: 100%;          /* Ensures the image is responsive */
+    height: auto;             /* Maintain aspect ratio */
   }
-  
+
+  .certifications__icon{
+    font-size: 24px;    
+    width: 24px;
+    height: 24px;
+    color: #000;
+  }
+
   .card .bottomsection {
     margin-top: 15px;
     padding: 10px 5px;
@@ -271,17 +280,17 @@
   }
   
   .card .bottomsection .row .item .bigtext {
-    font-size: 12px;
+    font-size: 22px;
     display: block;
+    color:#f2f2f2;
   }
   
   .card .bottomsection .row .item .regulartext {
-    font-size: 9px;
+    font-size: 12px;
   }
   
   .card .bottomsection .row .item:nth-child(2) {
     border-left: 1px solid rgba(255, 255, 255, 0.126);
-    border-right: 1px solid rgba(255, 255, 255, 0.126);
   }
 
 
@@ -354,4 +363,3 @@
 }
 
   }
-  
