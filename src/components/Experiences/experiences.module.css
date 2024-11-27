@@ -208,11 +208,12 @@
     min-width: 550px;  /* Set a minimum width for the items */
     list-style-type: none; /* Removes the default bullets */
     position: relative; /* For positioning the custom bullet */
+    padding-left: 25px; /* Space for the custom bullet inside the list item */
 }
 .work__list li::before {
     content: ''; /* Creates a pseudo-element */
     position: absolute;
-    left: -25px; /* Adjusts the horizontal position of the bullet */
+    left: 0; /* Align the bullet with the left side of the list item */
     top: 50%;
     transform: translateY(-50%); /* Vertically centers the bullet */
     width: 16px; /* Size of the custom bullet */
