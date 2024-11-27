@@ -116,14 +116,17 @@ const Experiences = () => {
                 : styles.qualification__content
             }>
             {/* Repeat Experience Entries */}
-            <div className={styles.qualification__data}>
-              <div>
-                <h3 className={styles.qualification__title}>AWS</h3>
-                <span className={styles.qualification__subtitle}>Transcorp Hilton, Abuja</span>
-                <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
-                  May 2023 - October 2023
+            <div className={styles.certifications__container}>
+              <div className={styles.certifications__cards}>
+                <div className={styles.certification}>
+                  <FontAwesomeIcon icon={faCertificate} className={styles.certification__icon}/>
+                  <div className={styles.certification__title}>AWS Certified Solutions Architect - Associate</div>
                 </div>
+                <div className={styles.certification}>
+                  <FontAwesomeIcon icon={faCertificate} className={styles.certification__icon}/>
+                  <div className={styles.certification__title}>AWS Certified Solutions Architect - Associate</div>
+                </div>
+              
               </div>
             </div>
           </div>

@@ -136,6 +136,19 @@
     transform: translate(6px, -7px);
 }
 
+.certifications__cards{
+    max-width: 996px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.certifications__container{
+    display: flex;
+    justify-content:center;
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
