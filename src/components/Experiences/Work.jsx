@@ -5,82 +5,62 @@ import React from 'react'
 import styles from './experiences.module.css'
 
 const Work = () => {
-    const [toggleState, setToggleState] = useState(1);
-
+  const [toggleState, setToggle] = useState(1);
   const toggleTab = (index) => {
-    setToggleState(index);
+    setToggle(index);
   };
   return (
-    <div>
-        <div className={styles.qualification__tabs}>
-          <div className={ toggleState === 4 ?
-           `${styles.qualification__button} ${styles.qualification__active}`
-            : styles.qualification__button
+    <div className={styles.work__container}>
+        <div className={styles.work__tabs}>
+          <div className={ toggleState === 1 ?
+           `${styles.work__button} ${styles.work__active}`
+            : styles.work__button
             } onClick={() => toggleTab(1)}>
                 <div>
-                    <span className={styles.qualification__rounder}></span>
-                    <span className={styles. qualification__line}></span>
+                    <span className={styles.work__rounder}></span>
+                    <span className={styles. work__line}></span>
                 </div>
                 Transcorp Hilton, Abuja
           </div>
 
-          <div className={ toggleState === 5 ? 
-          `${styles.qualification__button} ${styles.qualification__active}`
-          : styles.qualification__button
+          <div className={ toggleState === 2 ? 
+          `${styles.work__button} ${styles.work__active}`
+          : styles.work__button
             } onClick={() => toggleTab(2)}>
                 <div>
-                    <span className={styles.qualification__rounder}></span>
-                    <span className={styles. qualification__line}></span>
+                    <span className={styles.work__rounder}></span>
+                    <span className={styles. work__line}></span>
                 </div>
                 IHVN
           </div>
         </div>
 
-        <div className={styles.qualification__sections}>
+        <div className={styles.work__sections}>
           {/* Transcorp Hilton*/}
-          <div className={ toggleState === 4
-                ? `${styles.qualification__content} ${styles.qualification__content_active}`
-                : styles.qualification__content
+          <div className={ toggleState === 1
+                ? `${styles.work__content} ${styles.work__content_active}`
+                : styles.work__content
             }>
-            <div className={styles.qualification__data}>
+            <div className={styles.work__data}>
               <div>
-                <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
-                <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
-                <div className={styles.qualification__calendar}>
-                
-                  2019 - 2024
-                </div>
-              </div>
-              <div>
-                <span className={styles.qualification__rounder}></span>
-                <span className={styles. qualification__line}></span>
-              </div>
-            </div>
-
-            <div className={styles.qualification__data}>
-              <div>
-                <h3 className={styles.qualification__title}>Premiere Academy, Lugbe, Abuja</h3>
-                <span className={styles.qualification__subtitle}>Senior School Certificate</span>
-                <div className={styles.qualification__calendar}>
-                
-                  2013 - 2019
-                </div>
-              </div>
-              <div>
-              <span className={styles.qualification__rounder}></span>
-              <span className={styles. qualification__line}></span>
+                <h3 className={styles.work__title}>Transcorp Hilton, Abuja</h3>
+                <span className={styles.work__subtitle}>May 2023 - September 2023</span>
+            
               </div>
             </div>
           </div>
 
           {/* Experience Section */}
-          <div className={ toggleState === 5
-                ? `${styles.qualification__content} ${styles.qualification__content_active}`
-                : styles.qualification__content
+          <div className={ toggleState === 2
+                ? `${styles.work__content} ${styles.work__content_active}`
+                : styles.work__content
             }>
-            {/* Repeat Experience Entries */}
-            <div className={styles.qualification__data}>
-              <Work/>
+            <div className={styles.work__data}>
+              <div>
+                <h3 className={styles.work__title}>Institute of Human Virology, Nigeria</h3>
+                <span className={styles.work__subtitle}>June 2022 - September 2022</span>
+            
+              </div>
             </div>
           </div>
         </div>
