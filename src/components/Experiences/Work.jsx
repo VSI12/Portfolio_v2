@@ -16,22 +16,30 @@ const Work = () => {
            `${styles.work__button} ${styles.work__active}`
             : styles.work__button
             } onClick={() => toggleTab(1)}>
-                <div>
-                    <span className={styles.work__rounder}></span>
-                    <span className={styles. work__line}></span>
+                <div className={styles.work__data_tab}>
+                    <div className={styles.work__tab_rounder}>
+                      <span className={toggleState === 1 ? `${styles.work__rounder} ${styles.activeRounder}` : styles.work__rounder}></span>
+                      <span className={styles.work__line}></span>
+                    </div>
+                    <div className={styles.work__tab_text}>
+                      Transcorp Hilton, Abuja
+                    </div>
                 </div>
-                Transcorp Hilton, Abuja
           </div>
 
           <div className={ toggleState === 2 ? 
           `${styles.work__button} ${styles.work__active}`
           : styles.work__button
             } onClick={() => toggleTab(2)}>
-                <div>
-                    <span className={styles.work__rounder}></span>
-                    <span className={styles. work__line}></span>
+                <div className={styles.work__data_tab}>
+                    <div className={styles.work__tab_rounder}>
+                      <span className={toggleState === 2 ? `${styles.work__rounder} ${styles.activeRounder}` : styles.work__rounder}></span>
+                      <span className={styles.work__line}></span>
+                    </div>
+                    <div className={styles.work__tab_text}>
+                      IHVN
+                    </div>
                 </div>
-                IHVN
           </div>
         </div>
 

@@ -136,32 +136,31 @@
 /* WORK EXPERIENCE SECTION */
 .work__container {
     max-width: 768px;
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;  /* Center the container */
 }
 .work__tabs {
     display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
+    flex-direction: column;
+    gap: 3px;
+    text-wrap: nowrap;
 }
 .work__sections {
-    display: grid;
-    grid-template-columns: 0.5fr;
+    display: flex;
     justify-content: center;
 }
-
 .work__content {
     display: none;
 }
-
 .work__content_active {
     display: block;
 }
-
-.work__data {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem;
+.work__data_tab {
+    display: flex;                    /* Align horizontally */
+    align-items: flex-start;          /* Align items at the top */
+    gap: 1rem;                        /* Space between rounder and text */
+    position: relative;               /* For positioning reference */    
 }
 .work__button {
     font-size: var(--h3-font-size);
@@ -182,13 +181,24 @@
     height: 13px;
     background-color: #838383;
     border-radius: 50%;
+    transition: background-color 0.3s ease; /* Smooth transition on color change */
+}
+.activeRounder{
+    background-color:#342F2F;
 }
 .work__line {
-    display: block;
+    position: absolute;
+    top: 13px;                        /* Start below the rounder */
     width: 1px;
-    height: 100%;
-    background-color: #838383;
-    transform: translate(6px, -7px);
+    height: 100%;                     /* Full height for testing */
+    background-color: #838383;  
+}
+.work__tab_rounder{
+    display: flex;                   /* Keep rounder and line stacked vertically */
+    flex-direction: column;
+    align-items: center;             /* Center the rounder horizontally */
+    position: relative; 
+    min-height: 20px;       
 }
 
 .certifications__cards{
