@@ -1,6 +1,7 @@
 "use client"; // Add this if using Next.js 13+ with App Router
 import styles from "./experiences.module.css";
 import Certifications from "./Certifications";
+import Work from "./Work";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -100,18 +101,11 @@ const Experiences = () => {
             }>
             {/* Repeat Experience Entries */}
             <div className={styles.qualification__data}>
-              <div>
-                <h3 className={styles.qualification__title}>Information Systems Intern</h3>
-                <span className={styles.qualification__subtitle}>Transcorp Hilton, Abuja</span>
-                <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
-                  May 2023 - October 2023
-                </div>
-              </div>
+              <Work/>
             </div>
           </div>
 
-                {/* Certifications Section */}
+          {/* Certifications Section */}
           <div className={ toggleState === 3
                 ? `${styles.qualification__content} ${styles.qualification__content_active}`
                 : styles.qualification__content
