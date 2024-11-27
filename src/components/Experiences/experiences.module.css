@@ -201,6 +201,7 @@
     min-height: 20px;       
 }
 
+/* CERTIFICATION EXPERINCE SECTION */
 .certifications__cards{
     max-width: 996px;
     display: flex;
@@ -213,7 +214,6 @@
     display: flex;
     justify-content: center;
 }
-
 .card {
     width: 230px;
     border-radius: 20px;
@@ -223,11 +223,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-  
 .card:hover {
     transform: scale(1.05);
 }
-  
 .card .topsection {
     height: 200px;
     border-radius: 15px;
@@ -237,7 +235,6 @@
     position: relative;
     
 }
-  
 .card .topsection .border {
     border-bottom-right-radius: 10px;
     height: 30px;
@@ -248,7 +245,6 @@
     transform: skew(-40deg);
     box-shadow: -10px -10px 0 0 #1b233d;
 }
-  
 .card .topsection .border::before {
     content: "";
     position: absolute;
@@ -260,7 +256,6 @@
     border-top-left-radius: 10px;
     box-shadow: -5px -5px 0 2px #1b233d;
 }
-  
 .card .topsection::before {
     content: "";
     position: absolute;
@@ -272,7 +267,6 @@
     border-top-left-radius: 15px;
     box-shadow: -5px -5px 0 2px #1b233d;
 }
-  
 .card .topsection .icons {
     position: absolute;
     top: 0;
@@ -281,24 +275,20 @@
     display: flex;
     justify-content: flex-end;
 }
-  
 .card .topsection .icons .logo {
     height: 100%;
     aspect-ratio: 1;
     padding: 7px 0 7px 15px;
 }
-  
 .card .topsection .icons .logo .topsection {
     height: 100%;
 }
-  
 .card .topsection .icons .socialmedia {
     height: 100%;
     padding: 8px 15px;
     display: flex;
     gap: 7px;
 }
-  
 .card .topsection .imageContainer {
     display: flex;
     justify-content: center;
