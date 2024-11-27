@@ -1,7 +1,8 @@
 "use client"; // Add this if using Next.js 13+ with App Router
+import styles from "./experiences.module.css";
+import Certifications from "./Certifications";
 
 import { useState } from "react";
-import styles from "./experiences.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays,faGraduationCap, faBriefcase, faCertificate} from '@fortawesome/free-solid-svg-icons'
 
@@ -117,17 +118,7 @@ const Experiences = () => {
             }>
             {/* Repeat Experience Entries */}
             <div className={styles.certifications__container}>
-              <div className={styles.certifications__cards}>
-                <div className={styles.certification}>
-                  <FontAwesomeIcon icon={faCertificate} className={styles.certification__icon}/>
-                  <div className={styles.certification__title}>AWS Certified Solutions Architect - Associate</div>
-                </div>
-                <div className={styles.certification}>
-                  <FontAwesomeIcon icon={faCertificate} className={styles.certification__icon}/>
-                  <div className={styles.certification__title}>AWS Certified Solutions Architect - Associate</div>
-                </div>
-              
-              </div>
+              <Certifications/>
             </div>
           </div>
         </div>
