@@ -66,31 +66,25 @@
     height: 16px;
     font-size: 16px;
 }
-
 .qualification__active {
     color: var(--title-color-dark);
 }
-
 .qualification__sections {
     display: grid;
     grid-template-columns: 0.5fr;
     justify-content: center;
 }
-
 .qualification__content {
     display: none;
 }
-
 .qualification__content_active {
     display: block;
 }
-
 .qualification__data {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 1.5rem;
 }
-
 /* Reverse the grid for even rows */
 .qualification__data:nth-child(even) {
   grid-template-columns: 1fr max-content 1fr;  /* Same layout */
@@ -135,10 +129,11 @@
 
 /* WORK EXPERIENCE SECTION */
 .work__container {
-    max-width: 768px;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;  /* Center the container */
+    max-width: 796px;
+    width: 100%;  /* Ensures the container can resize fluidly */
+    display: flex;  /* Ensures the flex items don't wrap when resizing */
+    margin: 0 auto;  
+    border: 2px solid red;
 }
 .work__tabs {
     display: flex;
@@ -155,6 +150,9 @@
 }
 .work__content_active {
     display: block;
+}
+.work__tab_text{
+    font-size: 16px;
 }
 .work__data_tab {
     display: flex;                    /* Align horizontally */
@@ -200,6 +198,30 @@
     position: relative; 
     min-height: 20px;       
 }
+.work__list {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping but control it better */
+    gap: 10px;  /* Adjust space between list items */
+}
+.work__list li {
+    flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
+    min-width: 550px;  /* Set a minimum width for the items */
+    list-style-type: none; /* Removes the default bullets */
+    position: relative; /* For positioning the custom bullet */
+}
+.work__list li::before {
+    content: ''; /* Creates a pseudo-element */
+    position: absolute;
+    left: -25px; /* Adjusts the horizontal position of the bullet */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers the bullet */
+    width: 16px; /* Size of the custom bullet */
+    height: 16px; /* Size of the custom bullet */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23006CE0"><path d="M21 12 3 19l4-7-4-7 18 7z"></path></svg>');
+    background-size: contain; /* Ensures the SVG scales correctly */
+    background-repeat: no-repeat; /* Prevents the bullet from repeating */
+ }
+
 
 /* CERTIFICATION EXPERINCE SECTION */
 .certifications__cards{
@@ -299,18 +321,15 @@
     max-width: 100%;          /* Ensures the image is responsive */
     height: auto;             /* Maintain aspect ratio */
 }
-
 .certifications__icon{
     font-size: 24px;    
     width: 24px;
     height: 24px;
     color: #000;
 }
-
 .card .bottomsection {
     padding: 10px 5px;
 }
-  
 .card .bottomsection .title {
     display: block;
     font-size: 17px;
@@ -319,30 +338,25 @@
     text-align: center;
     letter-spacing: 2px;
 }
-  
 .card .bottomsection .row {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-  
 .card .bottomsection .row .item {
     flex: 30%;
     text-align: center;
     padding: 5px;
     color: rgba(170, 222, 243, 0.721);
 }
-  
 .card .bottomsection .row .item .bigtext {
     font-size: 22px;
     display: block;
     color:#f2f2f2;
 }
-  
 .card .bottomsection .row .item .regulartext {
     font-size: 12px;
 }
-  
 .card .bottomsection .row .item:nth-child(2) {
     border-left: 1px solid rgba(255, 255, 255, 0.126);
 }
@@ -415,3 +429,23 @@
 }
 
   }
+
+
+  @media (max-width: 768px) {
+    .work__container {
+        flex-direction: column;  /* Stack the content vertically on smaller screens */
+    }
+
+    .work__tabs {
+        flex-direction: row;  /* Arrange tabs in a row for smaller screens */
+    }
+
+    .work__sections {
+        display: block;  /* Stack sections vertically */
+    }
+
+    .work__list {
+        white-space: normal;  /* Allow wrapping on small screens */
+    }
+}
+

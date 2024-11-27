@@ -53,7 +53,13 @@ const Work = () => {
               <div>
                 <h3 className={styles.work__title}>Transcorp Hilton, Abuja</h3>
                 <span className={styles.work__subtitle}>May 2023 - September 2023</span>
-            
+                <ul className={styles.work__list}>
+                  <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
+                  internet speeds </li>
+                  <li>Facilitated the configurations of upgraded routers and access points, ensuring seamless integration into the existing 
+                  network.</li>
+                  <li>Conducted server updates to maintain and ensure system stability and security.</li>
+                </ul>    
               </div>
             </div>
           </div>
@@ -67,7 +73,13 @@ const Work = () => {
               <div>
                 <h3 className={styles.work__title}>Institute of Human Virology, Nigeria</h3>
                 <span className={styles.work__subtitle}>June 2022 - September 2022</span>
-            
+                <ul className={styles.work__list}>
+                  <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
+                  internet speeds </li>
+                  <li>Facilitated the configurations of upgraded routers and access points, ensuring seamless integration into the existing 
+                  network.</li>
+                  <li>Conducted server updates to maintain and ensure system stability and security.</li>
+                </ul>  
               </div>
             </div>
           </div>
