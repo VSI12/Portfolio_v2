@@ -20,17 +20,26 @@ const About = () => {
 
           <div className={styles.about__data}>
             <p className={styles.about__description}>
-            Hello! My name is Victor Hello! My name is Victor Iliya,<br />
-            and I enjoy creating cloud-based solutions that power digital experiences. <br />
-            My journey into cloud engineering began when I earned my first AWS certification, <br />
-            sparking a passion for scalable, resilient infrastructures. <br />
-            Since then, I have explored the possibilities of cloud technology, <br />
+            Hello! My name is Victor, and I enjoy creating cloud-based solutions that power digital experiences.
+            My journey into cloud engineering began when I earned my first AWS certification,
+            sparking a passion for scalable, resilient infrastructures.<br /><br />
+            Since then, I have explored the possibilities of cloud technology, 
             mastering tools and techniques that build secure and efficient systems.
             <br />
-            My main focus now is expanding my expertise into <br />
-             DevOps, integrating automation and CI/CD pipelines <br />
+            My main focus now is expanding my expertise into
+             DevOps, integrating automation and CI/CD pipelines
             to support agile, reliable software delivery.
+            <br /><br />
+            Here are a few technologies I’ve been working with recently:
             </p>
+            <ul className={styles.work__list}>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Python</li>
+              <li>Terraform</li>
+              <li>Jenkins</li>
+              <li>Ansible</li>
+            </ul>
           </div>
         </div>
       </section>
