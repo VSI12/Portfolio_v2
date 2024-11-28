@@ -42,13 +42,13 @@
   right: 35%;
 }
 
-  .about__container {
+.about__container {
   max-width:996px;
   display: flex;
   justify-content:center;
   margin-bottom: 50px;
   margin: 0 auto;  /* Center the container */
-  }
+}
 .about__data{
   color: #4A4A4A;
   font-weight: 600;;
@@ -62,6 +62,9 @@
   padding-bottom: 30px;
 }
 
+.about__description{
+  font-size: clamp(0.5rem, 3vw, 1.25rem);
+}
 .work__list {
   display: grid;
   grid-template-columns: 0.2fr 1fr;  /* Creates two equal-width columns */
