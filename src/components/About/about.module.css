@@ -7,40 +7,40 @@
 
 
 .section {
-    padding: 6rem 0 2rem;
-  }
-  .section__title {
-      font-size: var(--section-title-size);
-      color: var(--section-title-color);
-      position: relative;       /* Establish positioning context */
-      text-align: center;       /* Center the text */
-      margin: 1rem 0;           /* Add some vertical spacing */
-  }
-  .section__subtitle {
-      display: block;
-      font-size: var(--small-font-size);
-      margin-bottom: 4rem;
-      color: var(--section-subtitle-color);
-  }
-  .section__title,
-  .section__subtitle {
-      text-align: center;
-  }
-  .section__title::before,
-  .section__title::after {
-      content: '';
-      position: absolute;
-      width: 130px;              /* Length of the line on each side */
-      height: 1px;              /* Thickness of the line */
-      background-color: black;  /* Color of the line */
-      top: 50%;                 /* Align to the vertical center of the text */
-  }
-  .section__title::before {
-      left: 35%;      /* Adjusts dynamically */
-  }
-  .section__title::after {
-      right: 35%;
-  }
+  padding: 6rem 0 2rem;
+}
+.section__title {
+  font-size: var(--section-title-size);
+  color: var(--section-title-color);
+  position: relative;       /* Establish positioning context */
+  text-align: center;       /* Center the text */
+  margin: 1rem 0;           /* Add some vertical spacing */
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+  color: var(--section-subtitle-color);
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+.section__title::before,
+.section__title::after {
+  content: '';
+  position: absolute;
+  width: 130px;              /* Length of the line on each side */
+  height: 1px;              /* Thickness of the line */
+  background-color: black;  /* Color of the line */
+  top: 50%;                 /* Align to the vertical center of the text */
+}
+.section__title::before {
+  left: 35%;      /* Adjusts dynamically */
+}
+.section__title::after {
+  right: 35%;
+}
 
   .about__container {
   max-width:996px;
@@ -48,19 +48,18 @@
   justify-content:center;
   margin-bottom: 50px;
   margin: 0 auto;  /* Center the container */
-  border: 2px solid red;
   }
 .about__data{
   color: #4A4A4A;
   font-weight: 600;;
   font-size: clamp(1rem, 3vw, 1.5rem);
   text-align: justify;
-  border: 2px solid red;
 }
 
 .about__img{
-  border: 2px solid #006CE0;
   border-radius: 5%;
+  padding-right: 30px;
+  padding-bottom: 30px;
 }
 
 .work__list {
