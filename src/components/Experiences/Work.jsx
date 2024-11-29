@@ -80,11 +80,10 @@ const Work = () => {
                 </h3>
                 <span className={styles.work__subtitle}>June 2022 - September 2022</span>
                 <ul className={styles.work__list}>
-                  <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
-                  internet speeds </li>
-                  <li>Facilitated the configurations of upgraded routers and access points, ensuring seamless integration into the existing 
-                  network.</li>
-                  <li>Conducted server updates to maintain and ensure system stability and security.</li>
+                  <li>Provided comprehensive technical support, troubleshooting hardware, software, and network issues to ensure minimal downtime and optimal performance. </li>
+                  <li>Assisted with system upgrades and configurations to improve performance and user experience.</li>
+                  <li>Performed system updates to maintain stability and security.</li>
+                  <li>Worked with teams to solve complex IT issues and integrate new technologies.</li>
                 </ul>  
               </div>
             </div>
