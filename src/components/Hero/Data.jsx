@@ -67,7 +67,7 @@ const Data = () => {
         and enhanced team collaboration for reliable software delivery.</p>
         
         <div className={Styles.button__container}>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={`${Styles.button} ${Styles.type_C}`}>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" className={`${Styles.button} ${Styles.type_C}`}>
             <div className={Styles.button__line}></div>
             <div className={Styles.button__line}></div>
             <span className={Styles.button__text}>RESUME</span>
