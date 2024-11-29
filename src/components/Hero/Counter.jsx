@@ -7,7 +7,7 @@ const ViewCounter = () => {
   const [loading, setLoading] = useState(true);
 
   // Lambda URL from environment variable
-  const lambdaUrl = process.env.LAMBDA_URL;
+  const lambdaUrl = process.env.NEXT_PUBLIC_LAMBDA_URL;
   console.log(lambdaUrl)
 
   useEffect(() => {
