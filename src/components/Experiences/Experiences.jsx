@@ -19,7 +19,7 @@ const Experiences = () => {
       <h2 className={styles.section__title}>Experiences</h2>
       <span className={styles.section__subtitle}>My Personal Journey</span>
 
-      <div className={styles.qualification__container}>
+      <div className={`${styles.qualification__container} ${styles.container}`} >
         <div className={styles.qualification__tabs}>
           <div className={ toggleState === 1 ?
            `${styles.qualification__button} ${styles.qualification__active}`

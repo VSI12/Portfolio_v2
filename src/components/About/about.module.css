@@ -4,7 +4,13 @@
     margin-right: auto;
     border: 2px solid red;
   } */
-
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+    /* border: 2px solid rgb(0, 38, 255); */
+}
 
 .section {
   padding: 6rem 0 2rem;
@@ -58,11 +64,11 @@
 
 .about__img{
   border-radius: 10%;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
 }
 .about__user{
   border-radius: 10%;
+  border: 3px solid #006CE0;
 }
 
 .about__description{
@@ -113,4 +119,55 @@
     font-size: 32px;
   }
 }
-  
+ /* For medium devices */
+ @media screen and (max-width: 1540px) {
+  .section__title::before {
+        left: 30%;              /* Position the left line */
+  }
+  .section__title::after {
+        right: 30%;             /* Position the right line */
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .section__title::before {
+    left: 25%;              /* Position the left line */
+  }
+  .section__title::after {
+    right: 25%;             /* Position the right line */
+  }
+}
+    
+
+
+  /* For medium devices */
+@media screen and (max-width: 768px) {
+.section__title::before {
+    left: 15%;              /* Position the left line */
+}
+.section__title::after {
+    right: 15%;             /* Position the right line */
+}
+  }
+
+@media screen and (max-width: 675px) {
+  .section__title::before,
+.section__title::after {
+    width: 75px;              
+}
+.section__title::before {
+    left: 7.5%;              /* Position the left line */
+}
+.section__title::after {
+    right: 7.5%;             /* Position the right line */
+}
+  }
+
+@media screen and (max-width: 475px) {
+  .section__title::before {
+      left: 5%;              /* Position the left line */
+  }
+  .section__title::after {
+      right: 5%;             /* Position the right line */
+  }
+    }
