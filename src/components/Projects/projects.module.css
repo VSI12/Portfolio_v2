@@ -189,3 +189,55 @@
   
 }
   
+/* For medium devices */
+@media screen and (max-width: 1540px) {
+  .section__title::before {
+        left: 30%;              /* Position the left line */
+  }
+  .section__title::after {
+        right: 30%;             /* Position the right line */
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .section__title::before {
+    left: 25%;              /* Position the left line */
+  }
+  .section__title::after {
+    right: 25%;             /* Position the right line */
+  }
+}
+    
+
+
+  /* For medium devices */
+@media screen and (max-width: 768px) {
+.section__title::before {
+    left: 15%;              /* Position the left line */
+}
+.section__title::after {
+    right: 15%;             /* Position the right line */
+}
+  }
+
+@media screen and (max-width: 675px) {
+  .section__title::before,
+.section__title::after {
+    width: 75px;              
+}
+.section__title::before {
+    left: 7.5%;              /* Position the left line */
+}
+.section__title::after {
+    right: 7.5%;             /* Position the right line */
+}
+  }
+
+@media screen and (max-width: 475px) {
+  .section__title::before {
+      left: 5%;              /* Position the left line */
+  }
+  .section__title::after {
+      right: 5%;             /* Position the right line */
+  }
+    }

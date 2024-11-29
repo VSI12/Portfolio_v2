@@ -7,7 +7,7 @@
 }
 .footer{
     display: block;
-    margin-top: 4.5rem;
+    margin-top: 3rem;
     color: var(--title-color);
     text-align: center;
     font-size: 16px;
@@ -15,4 +15,46 @@
 }
 .footer__container{
     padding: 2rem 0 6rem;
+}
+
+
+.floatingWidget {
+    bottom: 20px;    /* Distance from the bottom */
+    left: 20px;      /* Distance from the left */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
+    display: none;
+    max-width: 300px;
+    
+  
+  }
+  
+.icon{
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    color: rgb(82, 82, 82);
+    transition: all 0.3s ease-in-out;
+}
+.icon:hover{
+    color: #000;
+    transform: translateY(-5px);
+}
+  
+.social{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+   .floatingWidget{
+        display: block;
+        margin: 0 auto;
+        margin-top: 1rem;
+   }
 }

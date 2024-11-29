@@ -29,3 +29,9 @@
     gap: 1rem;
     padding-bottom: 5rem;
 }
+
+@media screen and (max-width: 992px) {
+   .floatingWidget{
+        display: none;
+   }
+}
