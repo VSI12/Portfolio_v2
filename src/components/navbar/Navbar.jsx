@@ -1,88 +1,48 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import styles from './navbar.module.css'
 
 const links = [
-  { id: 1, name: 'About', sectionId: 'about' },
-  { id: 2, name: 'Projects', sectionId: 'projects' },
-  { id: 3, name: 'Experiences', sectionId: 'experiences' },
-  { id: 4, name: 'Contact', sectionId: 'contact' },
+  { id: 1, name: 'About', href: '/about' },
+  { id: 2, name: 'Projects', href: '/projects' },
+  { id: 3, name: 'Experiences', href: '/experiences' },
+  { id: 4, name: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeNav, setActiveNav] = useState('hero')
-  const [isScrolled, setIsScrolled] = useState(false)
-  const router = useRouter()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY >= 80)
-
-      const scrollPosition = window.scrollY + 200
-      for (let i = links.length - 1; i >= 0; i--) {
-        const section = document.getElementById(links[i].sectionId)
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveNav(links[i].sectionId)
-          break
-        }
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const navigateToSection = (sectionId) => {
-    setActiveNav(sectionId)
-    setIsMenuOpen(false)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      router.push(`/#${sectionId}`, { scroll: false })
-    }
-  }
-
-  const reloadPage = () => {
-    router.push('/', { scroll: false }) // Navigate to home path
-    router.refresh() // Reload the page
-  }
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }) // Smooth scroll to top
-    router.push('/', { scroll: false }) // Update URL to home path without reloading
-  }
-
-  useEffect(() => {
-    
-  })  
+  const [activeNav, setActiveNav] = useState('home')  // Home page as the initial active page
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
       <div className={styles.container}>
-        <button
-          onClick={scrollToTop}
-          className={styles.logoButton}
-          aria-label='Go to home section'
-        >
-          <Image src='/logo.png' alt='Logo' width={61} height={60} />
-        </button>
+        <Link href="/" passHref>
+          <button
+            className={styles.logoButton}
+            aria-label="Go to home page"
+          >
+            <Image src="/logo.png" alt="Logo" width={61} height={60} />
+          </button>
+        </Link>
 
-        <nav className={`${styles.nav} ${isMenuOpen ? styles.menuOpen : ''}`}>
+        <nav className={styles.nav}>
           {links.map((link) => (
-            <button
+            <Link
               key={link.id}
-              onClick={() => navigateToSection(link.sectionId)}
-              className={`${styles.navLink} ${
-                activeNav === link.sectionId ? styles.activeLink : ''
-              }`}
+              href={link.href}
+              passHref
             >
-              {link.name}
-            </button>
+              <button
+                onClick={() => setActiveNav(link.href)}
+                className={`${styles.navLink} ${activeNav === link.href ? styles.activeLink : ''}`}
+              >
+                {link.name}
+              </button>
+            </Link>
           ))}
         </nav>
 
