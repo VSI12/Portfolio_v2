@@ -11,7 +11,7 @@ const About = () => {
           <div className={styles.about__img}>
             <Image
               src="/image.jpeg"
-              alt="About Image"
+              alt="About Imge"
               className={styles.about__user}
               width={200}
               height={200}
